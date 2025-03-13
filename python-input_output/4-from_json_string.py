@@ -1,19 +1,18 @@
 #!/usr/bin/python3
-"""function that returns the JSON representation of an object (string)"""
-
-
+"""function that returns an object (Python data structure)
+represented by a JSON string"""
 import json
 
 
-def to_json_string(my_obj):
+def from_json_string(my_str):
     """
-    Return JSON representation of an object.
+    Return an object by a JSON representation.
 
     Args:
-        my_obj: object
+        my_str: JSON representation
 
     Raises:
-        Exception: when the object cannot be encoded.
+        Exception: when the string can't be decoded
     """
 
-    return json.dumps(my_obj)
+    return json.loads(my_str)
